@@ -1,0 +1,17 @@
+{
+  "Index": {
+    "title": "Hello world!"
+  },
+  "navigation": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "interface-profiles": "Interface Profiles",
+    "client-profiles": "Client Profiles",
+    "configurations": "Configurations",
+    "processes": "Processes",
+    "data-models": "Data Models",
+    "views": "Views",
+    "scheduling": "Scheduling",
+    "create-scheduling": "Create Scheduling"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "Index": {
+    "title": "Hello world! - JP"
+  },
+  "navigation": {
+    "home": "Home - JP",
+    "dashboard": "ダッシュボード",
+    "interface-profiles": "Interface Profiles - JP",
+    "client-profiles": "Client Profiles - JP",
+    "configurations": "Configurations - JP",
+    "processes": "Processes - JP",
+    "data-models": "Data Models - JP",
+    "views": "Views - JP",
+    "scheduling": "Scheduling - JP",
+    "create-scheduling": "Create Scheduling - JP"
+  }
+}
