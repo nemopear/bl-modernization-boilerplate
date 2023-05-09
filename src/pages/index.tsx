@@ -12,8 +12,9 @@ export default function Home() {
   const t = useTranslations();
   return (
     <BaseLayout>
-      {t("Index.title")}
-      <div className="space-x-4">
+      <div className="text-primary">{t("Index.title")}</div>
+
+      <div className="space-x-4 mt-4">
         <Button variant="contained" data-mui-color-scheme="dark">
           Button dark
         </Button>
@@ -21,6 +22,9 @@ export default function Home() {
           Button light
         </Button>
         <Button variant="contained">Button</Button>
+        <Button variant="contained" color="secondary">
+          Button
+        </Button>
       </div>
     </BaseLayout>
   );

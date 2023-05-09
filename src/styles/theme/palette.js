@@ -73,7 +73,9 @@ export default {
   border: "#cecece",
 };
 
+// Prepare for theme mode
 export const themeSchema = extendTheme({
+  cssVarPrefix: "bl",
   colorSchemes: {
     light: {
       // palette for light mode
@@ -84,6 +86,12 @@ export const themeSchema = extendTheme({
           main: "#77a300",
           light: "#9fc71c",
           text: "#fff",
+        },
+        secondary: {
+          contrastText: white,
+          dark: "#fe761e",
+          main: "#ff9521",
+          light: "#ffb726",
         },
       },
     },
@@ -96,6 +104,12 @@ export const themeSchema = extendTheme({
           main: "#fff",
           light: "#9fc71c",
           text: "#000",
+        },
+        secondary: {
+          contrastText: white,
+          dark: "#fe761e",
+          main: "#ff9521",
+          light: "#ffb726",
         },
       },
     },
