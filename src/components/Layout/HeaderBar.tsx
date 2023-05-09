@@ -1,8 +1,8 @@
 import { AppBar, Box, IconButton, Toolbar } from "@mui/material";
 import { BsList } from "react-icons/bs";
-import LanguageSelector from "./LanguageSelector";
-
-// import { AccountDropdown } from "./AccountDropdown";
+import { AccountDropdown } from "../AccountDropdown";
+import LanguageSelector from "../LanguageSelector";
+import Logo from "../Logo";
 
 export type HeaderBarProps = {
   hasToggleMenu?: boolean;
@@ -46,17 +46,17 @@ const HeaderBar = ({
             </IconButton>
           </>
         )}
-        {/* <Logo
-                    color="black"
-                    width={70}
-                    //height={35}
-                    redirectLink={logoLink}
-                /> */}
+        <Logo
+          color="black"
+          // width={70}
+          //height={35}
+          redirectLink={logoLink}
+        />
         {/* Logo */}
-        {/* <Box sx={{ marginLeft: "auto" }}>
+        <Box sx={{ marginLeft: "auto" }}>
           <LanguageSelector />
-        </Box> */}
-        {/* <AccountDropdown /> */}
+        </Box>
+        <AccountDropdown />
       </Toolbar>
     </AppBar>
   );

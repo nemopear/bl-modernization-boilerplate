@@ -103,7 +103,7 @@ export const BaseLayout = ({
             sx={{
               display: { xs: "block", xl: "none" },
               "& .MuiDrawer-paper": {
-                backgroundColor: theme.palette.primary.main,
+                backgroundColor: theme.palette.primary.dark,
                 boxSizing: "border-box",
                 width: DRAWER_WIDTH,
                 boxShadow: "none",
@@ -133,7 +133,7 @@ export const BaseLayout = ({
         </Box>
         <Box
           component="main"
-          className="gray-gradient relative"
+          className="bg-gray-100 relative"
           sx={{
             flexGrow: 1,
             p: 3,

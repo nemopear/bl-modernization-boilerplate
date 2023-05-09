@@ -18,24 +18,24 @@ export const MENUS = [
 
   {
     icon: <BsSliders />,
-    title: "Configurations",
+    title: "Menu 1",
     to: "",
-    translationKey: "configurations",
-    id: "configurations",
+    translationKey: "menu1",
+    id: "menu-1",
     items: [
       {
         icon: <BsDiagram2 />,
-        title: "Processes",
+        title: "Menu 1.1",
         to: "",
-        translationKey: "processes",
-        id: "processes",
+        translationKey: "menu1_1",
+        id: "menu-1-1",
       },
       {
         icon: <BsDiagram2 />,
-        title: "Data Models",
+        title: "Menu 1.2",
         to: "",
-        translationKey: "data-models",
-        id: "data-models",
+        translationKey: "menu1_2",
+        id: "menu-1-2",
       },
     ],
   },

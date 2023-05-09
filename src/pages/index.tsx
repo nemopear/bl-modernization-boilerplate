@@ -10,7 +10,20 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const t = useTranslations();
-  return <BaseLayout>{t("Index.title")}</BaseLayout>;
+  return (
+    <BaseLayout>
+      {t("Index.title")}
+      <div className="space-x-4">
+        <Button variant="contained" data-mui-color-scheme="dark">
+          Button dark
+        </Button>
+        <Button variant="contained" data-mui-color-scheme="light">
+          Button light
+        </Button>
+        <Button variant="contained">Button</Button>
+      </div>
+    </BaseLayout>
+  );
 }
 
 export async function getStaticProps(context: { locale: any }) {

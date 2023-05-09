@@ -12,7 +12,7 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="UTF-8" />
           <meta name="theme-color" content={theme.palette.primary.main} />
-          <link rel="shortcut icon" href="/favicon.svg" />
+          <link rel="shortcut icon" href="/favicon.ico" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="stylesheet"

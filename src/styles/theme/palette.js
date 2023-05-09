@@ -1,6 +1,10 @@
 /* eslint-disable import/no-anonymous-default-export */
 import { colors } from "@mui/material";
 import { grey } from "@mui/material/colors";
+import {
+  Experimental_CssVarsProvider as CssVarsProvider,
+  experimental_extendTheme as extendTheme,
+} from "@mui/material/styles";
 
 const white = "#FFFFFF";
 const black = "#222";
@@ -28,18 +32,18 @@ export default {
     main: "#4CAF50",
     light: "#53c257",
   },
-  // info: {
-  //     contrastText: white,
-  //     dark: "#737373",
-  //     main: "#949494",
-  //     light: "#949494",
-  // },
-  // warning: {
-  //     contrastText: white,
-  //     dark: "#CC0001",
-  //     main: "#AF0000",
-  //     light: "#760000",
-  // },
+  info: {
+    contrastText: white,
+    dark: "#737373",
+    main: "#949494",
+    light: "#949494",
+  },
+  warning: {
+    contrastText: white,
+    dark: "#CC0001",
+    main: "#AF0000",
+    light: "#760000",
+  },
   error: {
     contrastText: white,
     dark: "#960010",
@@ -68,3 +72,32 @@ export default {
   divider: "#E0E0E0",
   border: "#cecece",
 };
+
+export const themeSchema = extendTheme({
+  colorSchemes: {
+    light: {
+      // palette for light mode
+      palette: {
+        primary: {
+          contrastText: white,
+          dark: "#396e00",
+          main: "#77a300",
+          light: "#9fc71c",
+          text: "#fff",
+        },
+      },
+    },
+    dark: {
+      // palette for dark mode
+      palette: {
+        primary: {
+          contrastText: "#000",
+          dark: "#396e00",
+          main: "#fff",
+          light: "#9fc71c",
+          text: "#000",
+        },
+      },
+    },
+  },
+});

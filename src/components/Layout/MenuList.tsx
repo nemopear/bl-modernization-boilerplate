@@ -1,9 +1,7 @@
 import { MENUS } from "@/constants/menus";
 import theme from "@/styles/theme";
-import { usePathname, useRouter } from "next/navigation";
 import {
   Box,
-  Button,
   Collapse,
   IconButton,
   List,
@@ -13,10 +11,11 @@ import {
   ListItemText,
 } from "@mui/material";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
+import { useTranslations } from "next-intl";
 import { ReactNode, useState } from "react";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
-import { useTranslations } from "next-intl";
 export interface MenuItemProps {
   slug?: string;
   to?: string;

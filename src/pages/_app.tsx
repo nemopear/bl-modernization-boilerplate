@@ -1,5 +1,9 @@
 import "@/styles/globals.scss";
 import "@/styles/tailwind.scss";
+import {
+  Experimental_CssVarsProvider as CssVarsProvider,
+  experimental_extendTheme as extendTheme,
+} from "@mui/material/styles";
 import theme from "@/styles/theme";
 import createEmotionCache from "@/styles/theme/createEmotionCache";
 import { CacheProvider, EmotionCache, ThemeProvider } from "@emotion/react";
@@ -7,6 +11,7 @@ import { StyledEngineProvider, CssBaseline } from "@mui/material";
 import { NextIntlProvider } from "next-intl";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import { themeSchema } from "@/styles/theme/palette";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -25,13 +30,15 @@ export default function App(props: MyAppProps) {
         <title>Batchline</title>
       </Head>
       <StyledEngineProvider injectFirst>
-        <ThemeProvider theme={theme}>
-          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-          <CssBaseline />
-          <NextIntlProvider messages={pageProps.messages}>
-            <Component {...pageProps} />
-          </NextIntlProvider>
-        </ThemeProvider>
+        <CssVarsProvider theme={themeSchema}>
+          <ThemeProvider theme={theme}>
+            {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+            <CssBaseline />
+            <NextIntlProvider messages={pageProps.messages}>
+              <Component {...pageProps} />
+            </NextIntlProvider>
+          </ThemeProvider>
+        </CssVarsProvider>
       </StyledEngineProvider>
     </CacheProvider>
   );
