@@ -85,7 +85,6 @@ export const themeSchema = extendTheme({
           dark: "#396e00",
           main: "#77a300",
           light: "#9fc71c",
-          text: "#fff",
         },
         secondary: {
           contrastText: white,
@@ -103,7 +102,6 @@ export const themeSchema = extendTheme({
           dark: "#396e00",
           main: "#fff",
           light: "#9fc71c",
-          text: "#000",
         },
         secondary: {
           contrastText: white,

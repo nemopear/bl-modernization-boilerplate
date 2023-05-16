@@ -1,15 +1,23 @@
-import type { Meta, StoryObj } from '@storybook/react';
-
-import { Button } from './Button';
+import Button from "../../src/components/Button";
+import type { Meta, StoryObj } from "@storybook/react";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta: Meta<typeof Button> = {
-  title: 'Example/Button',
+  title: "Example/Button",
   component: Button,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   argTypes: {
-    backgroundColor: {
-      control: 'color',
+    variant: {
+      options: ["contained", "outlined", "text"],
+      control: { type: "radio" },
+      defaultValue: "text",
+      description:
+        "The Button comes with three variants: text (default), contained, and outlined.",
+    },
+    color: {
+      options: ["primary", "secondary", "error"],
+      control: { type: "radio" },
+      defaultValue: "primary",
     },
   },
 };
@@ -20,27 +28,34 @@ type Story = StoryObj<typeof Button>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary: Story = {
   args: {
-    primary: true,
-    label: 'Button',
+    variant: "contained",
+    children: "Button",
+    color: "primary",
   },
 };
 
 export const Secondary: Story = {
   args: {
-    label: 'Button',
+    variant: "contained",
+    children: "Button",
+    color: "secondary",
   },
 };
 
 export const Large: Story = {
   args: {
-    size: 'large',
-    label: 'Button',
+    size: "large",
+    variant: "contained",
+    children: "Button",
+    color: "primary",
   },
 };
 
 export const Small: Story = {
   args: {
-    size: 'small',
-    label: 'Button',
+    size: "small",
+    variant: "contained",
+    children: "Button",
+    color: "primary",
   },
 };

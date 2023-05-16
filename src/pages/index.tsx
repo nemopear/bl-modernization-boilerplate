@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import Button from "@mui/material/Button";
+import Button from "@/components/Button";
 import { BaseLayout } from "@/components/Layout";
 import { GetStaticPropsContext } from "next/types";
 import { getNextIntlMessages } from "@/utils/translation.helper";

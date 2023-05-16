@@ -119,7 +119,7 @@ export const BaseLayout = ({
                 display: "none",
               },
               "& .MuiDrawer-paper": {
-                backgroundColor: theme.palette.primary.main,
+                backgroundColor: theme.palette.primary.dark,
                 boxSizing: "border-box",
                 width: DRAWER_WIDTH,
                 boxShadow: "none",

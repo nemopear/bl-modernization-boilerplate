@@ -13,5 +13,13 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
+
+  previewHead: (head) => `
+    ${head}
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:300,400,500,600,700,800&display=swap"
+      rel="stylesheet"
+    />
+  `,
 };
 export default config;
