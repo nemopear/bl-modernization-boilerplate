@@ -1,13 +1,10 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
+import CustomizedAccordions from "@/components/Accordion/index.";
 import Button from "@/components/Button";
 import { BaseLayout } from "@/components/Layout";
-import { GetStaticPropsContext } from "next/types";
-import { getNextIntlMessages } from "@/utils/translation.helper";
-import { useTranslations } from "next-intl";
-import { Typography } from "@mui/material";
+import Stepper from "@/components/Stepper";
 import Tabs from "@/components/Tabs";
-import HorizontalNonLinearStepper from "@/components/Stepper";
+import { Typography } from "@mui/material";
+import { useTranslations } from "next-intl";
 
 const tabs = [
   {
@@ -25,6 +22,34 @@ const tabs = [
         <Typography variant="h3">Tab with Heading 3</Typography>
         <p>Hello I am a tab with a heading</p>
       </div>
+    ),
+  },
+];
+
+const steps = ["Step 1", "Step 2", "Step 3"];
+
+const accordionsMock = [
+  {
+    id: "1",
+    title: "A",
+    details: "123",
+  },
+  {
+    id: "2",
+    title: "B",
+    details: <Typography variant="h4">Accordion 2</Typography>,
+  },
+  {
+    id: "3",
+    title: "C",
+    details: (
+      <>
+        <Typography variant="h4">Accordion 3</Typography>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo placeat
+          dignissimos esse!
+        </p>
+      </>
     ),
   },
 ];
@@ -59,11 +84,12 @@ export default function Home() {
 
         <div>
           <Typography variant="h2">Stepper</Typography>
-          <HorizontalNonLinearStepper />
+          <Stepper steps={steps} />
         </div>
 
         <div>
           <Typography variant="h2">Accordion</Typography>
+          <CustomizedAccordions accordions={accordionsMock} />
         </div>
       </div>
     </BaseLayout>
